@@ -1,0 +1,17 @@
+{
+  "name": "module-federation",
+  "version": "1.0.0",
+  "description": "esbuild microfrontend",
+  "main": "index.js",
+  "repository": "https://github.com/hendriknielaender/module-federation.git",
+  "author": "<hendrik@nielaender.de>",
+  "license": "MIT",
+  "scripts": {
+    "install:apps": "concurrently \"cd host-app; yarn\" \"cd remote-app; yarn\"",
+    "start": "concurrently \"cd remote-app; npm start\" \"cd host-app; npm run dev\""
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "^5.11.5",
+    "concurrently": "^7.5.0"
+  }
+}
